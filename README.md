@@ -1,6 +1,6 @@
 # News App
 
-This a test application built by castroarguello.
+This is a test application built by castroarguello.
 
 ## Getting Started
 
@@ -30,6 +30,20 @@ git clone --depth=1 https://github.com/castroarguello/news-app.git <your-project
 ```
 
 The `depth=1` tells git to only pull down one commit worth of historical data.
+
+### Config news source
+
+Edit app/config.js to modify the news source:
+
+```
+  .constant('APP_CONFIG', {
+    environment: 'development',
+    services: {
+      baseUrl: '/data/',
+      news: 'articles.json',
+    }
+  });
+```
 
 ### Install Dependencies
 
