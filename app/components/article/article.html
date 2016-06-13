@@ -1,0 +1,16 @@
+<div class="article animated" ng-if="article">
+  <div class="row" ng-click="ctrl.ngClick()">
+    <div class="article-header col-md-12">
+      <img class="pull-left img-responsive" ng-src="{{article.image}}" />
+      <p class="article-title"> {{ article.title }} </p>
+    </div>
+  </div>
+  <div class="article-body animated row" uib-collapse="ctrl.type=='item' && !article.isExpanded">
+    <div class="animated" ng-class="article.isExpanded ? 'bounceInDown':'bounceOutUp'">
+      <div class="col-sm-4"> <img class="img-responsive" ng-src="{{article.image}}" /> </div>
+      <div class="col-sm-8"> 
+        <div class="article-title"> {{ article.title }} </div>
+        <div class="article-content">{{ article.content }} </div>
+      </div>
+    </div>
+</div>

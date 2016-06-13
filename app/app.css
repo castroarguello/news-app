@@ -28,3 +28,109 @@
   content: "";
   padding: 0;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.article-list {
+  overflow: hidden;
+}
+
+.article-header {
+  background-color: white;
+  cursor: pointer;
+  margin-top: 13px;
+  min-height: 54px;
+  padding: 8px 13px;
+}
+.article-header img {
+  height: 34px;
+  margin: 0 13px;
+  width: 34px;
+}
+.article-header .article-title {
+  color: #333;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 13px;
+  margin-right: 8px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.article-body {
+  background-color: white;
+  margin-top: 13px;
+  padding: 0 13px;
+}
+.article-body img {
+  margin-top: 13px;
+}
+
+@media (min-width: 768px) {
+  .article-body img {
+    margin-left: -15px;
+    margin-top: 0;
+  }
+}
+
+.article-body span {
+  margin-top: 13px;
+}
+.article-body.animated {
+  animation-duration: .4s;
+  transition-duration: .4s;
+}
+.article-body .animated {
+  animation-duration: .5s;
+  transition-duration: .5s;
+}
+
+.collapsing {
+}
+
+.article-list.ng-hide {
+}
+.article-list-title {
+  overflow: hidden;
+  margin-left: 13px;
+}
+.article-list-title .animated {
+  animation-duration: .2s;
+  transition-duration: .2s;
+}
+
+.article {
+  overflow: hidden;
+}
+.article.animated {
+  animation-duration: 1s;
+  transition-duration: 1s;
+}
+
+.articles-expanded .article {
+  visibility: visible;
+}
+.articles-collapsed .article {
+  visibility: hidden;
+}
+
+.article:nth-child(1){ animation-delay: .05s }
+.article:nth-child(2){ animation-delay: .1s }
+.article:nth-child(3){ animation-delay: .15s }
+.article:nth-child(4){ animation-delay: .2s }
+
+.loader {
+  margin-top: 13px;
+}
+.article-body .article-title {
+  color: #333;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 13px 0 5px 0;
+}
+.article-content {
+  color: #333;
+  margin: 0 0 13px 0;
+}

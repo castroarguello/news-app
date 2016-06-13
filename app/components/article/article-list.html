@@ -1,0 +1,33 @@
+<div class="article-list">
+  <div class="well animated" ng-class="ctrl.isClosed ? 'fadeOutDownBig':'bounceInUp'">
+    <div class="article-list__header row">
+      <div class="col-md-12">
+        <div class="pull-left">
+          <button class="btn btn-default pull-left" ng-click="ctrl.toggle()">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+        </div>
+        <button type="button" class="close" aria-label="Close" ng-click="ctrl.close()"><span aria-hidden="true">&times;</span></button>
+        <div class="article-list-title pull-left">
+          <div class="animated" ng-class="ctrl.selected ? 'slideInDown' : 'slideOutLeft'"> {{ ctrl.title }} </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="loader" ng-if="ctrl.loading"> Loading... </div>
+    
+    <div class="article-list__items"
+      ng-class="ctrl.isExpanded ? 'articles-expanded' : 'articles-collapsed'"
+      ng-show="ctrl.articles && !ctrl.loading">
+      <article class="animated"
+        type="item"
+        model="article"
+        is-expanded="ctrl.isExpanded"
+        
+        ng-class="ctrl.isExpanded ? 'bounceInLeft' : 'bounceOutRight'"
+        ng-repeat="article in ctrl.articles"
+        ng-click="ctrl.select(article)">
+      </article>
+    </div>
+  </div>
+</div>
