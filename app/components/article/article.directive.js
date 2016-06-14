@@ -24,7 +24,7 @@ function articleList() {
     ctrl.element = elem;
   }
 
-  function Controller(ArticleService) {
+  function Controller($timeout, $location, ArticleService) {
     var ctrl = this;
     ctrl.select = function(article) {
       article.isExpanded = !article.isExpanded;
@@ -41,6 +41,9 @@ function articleList() {
 
     ctrl.close = function() {
       ctrl.isClosed = true;
+      $timeout(function(){
+        $location.path('/about')
+      }, 500);
     }
 
     ctrl.loadData = function() {
