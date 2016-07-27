@@ -100,3 +100,13 @@ http-server -a localhost -p 8000 app/
 
 Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
 configure your server to serve the files under the `app/` directory.
+
+### Docker
+
+Alternatively, you can use docker to create the environment:
+
+
+```
+docker compose build && docker compose up -d
+```
+
